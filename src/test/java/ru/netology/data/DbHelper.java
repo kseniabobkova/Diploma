@@ -11,8 +11,9 @@ import static java.sql.DriverManager.getConnection;
 
 public class DbHelper {
 
-    //private static String url= System.getProperty("db.url");
-    private static String url= "jdbc:mysql://localhost:3306/app";
+    private static String url= System.getProperty("db.url");
+    //private static String url= "jdbc:mysql://localhost:3306/app";
+    //private static String url= "jdbc:mysql://localhost:3306/app";
     private static String user = System.getProperty("db.user");
     private static String password = System.getProperty("db.password");
 
