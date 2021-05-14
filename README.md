@@ -4,8 +4,9 @@
 
 На компьютере установлены: 
 
-    • IntelliJ IDEA c JDK 11
-    • Docker
+    • Установить и запустить IntelliJ IDEA c JDK 11
+    • Установить и запустить Docker Desktop
+    
     
 ## Шаги:
     1. Ввести в терминале git clone https://github.com/kseniabobkova/Diploma.git
