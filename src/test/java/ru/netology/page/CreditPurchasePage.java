@@ -35,7 +35,6 @@ public class CreditPurchasePage {
 
     }
 
-
     public void checkSuccessNotification() {
         $(".notification_status_ok").shouldBe(visible, Duration.ofMillis(20000));
     }

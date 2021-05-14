@@ -36,7 +36,6 @@ dependencies {
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
     testImplementation 'io.rest-assured:rest-assured:4.3.0'
     testImplementation 'io.qameta.allure:allure-selenide:2.13.0'
-    testImplementation (group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30')
 
 }
 

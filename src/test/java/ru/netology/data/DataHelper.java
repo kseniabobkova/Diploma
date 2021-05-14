@@ -1,8 +1,6 @@
 package ru.netology.data;
 
 import com.github.javafaker.Faker;
-import com.github.javafaker.service.FakeValuesService;
-import com.github.javafaker.service.RandomService;
 
 import java.time.LocalDate;
 import java.util.Locale;
@@ -44,13 +42,11 @@ public class DataHelper {
     }
 
     public static String getValidName() {
-        Faker faker = new Faker(new Locale("en"));
         return faker.name().firstName() + " " + faker.name().lastName();
     }
 
     public static String getValidCvc() {
-        FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en"), new RandomService());
-        return fakeValuesService.numerify("###");
+        return faker.numerify("###");
     }
 
 

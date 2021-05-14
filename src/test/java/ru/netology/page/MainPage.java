@@ -8,22 +8,22 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class MainPage {
 
-        private final SelenideElement heading = $$("h2").find(exactText("Путешествие дня"));
-        private final SelenideElement buttonBuy = $$("button").find(exactText("Купить"));
-        private final SelenideElement buttonCredit = $$("button").find(exactText("Купить в кредит"));
+        private final SelenideElement HEADING = $$("h2").find(exactText("Путешествие дня"));
+        private final SelenideElement BUTTONBUY = $$("button").find(exactText("Купить"));
+        private final SelenideElement BUTTONCREDIT = $$("button").find(exactText("Купить в кредит"));
 
         public MainPage() {
-            heading.shouldBe(Condition.visible);
+            HEADING.shouldBe(Condition.visible);
         }
 
         public CardPurchasePage buy() {
-            buttonBuy.click();
+            BUTTONBUY.click();
             return new CardPurchasePage();
 
         }
 
         public CreditPurchasePage buyInCredit() {
-            buttonCredit.click();
+            BUTTONCREDIT.click();
             return new CreditPurchasePage();
         }
     }

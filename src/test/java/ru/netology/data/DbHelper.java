@@ -53,7 +53,7 @@ public class DbHelper {
                         url, user, password)
                 ) {
 
-            result = runner.query(conn, query, new ScalarHandler<String>());
+            result = (String) runner.query(conn, query, new ScalarHandler());
             System.out.println(result);
             return result;
         }
