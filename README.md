@@ -1,3 +1,9 @@
+# Дипломный проект профессии «Тестировщик»
+
+  * [План автоматизации тестирования](https://github.com/kseniabobkova/Diploma/blob/main/documentation/Test-plan.md)
+  * [Отчёт о проведённом тестировании](https://github.com/kseniabobkova/Diploma/blob/main/documentation/Report.md)
+  * [Отчёт по итогам автоматизации](https://github.com/kseniabobkova/Diploma/blob/main/documentation/Summary.md)
+
 # Процедура запуска автотестов
 
 ## Предусловия:
@@ -6,6 +12,7 @@
 
     • Установить и запустить IntelliJ IDEA c JDK 11
     • Установить и запустить Docker Desktop
+    • Установить и запустить Docker Compose
     
     
 ## Шаги:
