@@ -13,8 +13,14 @@
    * Успешных тест-кейсов 63,63% (28 авто-тестов)
    * Неуспешных тест-кейсов 36,37% (16 авто-тестов)
 
-Подробнее здесь: [Отчет Allure](https://github.com/kseniabobkova/Diploma/tree/main/AllureReports)
+### Отчет Allure:
 
+ ![](https://github.com/kseniabobkova/Diploma/blob/main/documentation/AllureReports/Allure_Report.jpg)
+ 
+ ![](https://github.com/kseniabobkova/Diploma/blob/main/documentation/AllureReports/Allure_Report_CardPurchaseTest.jpg)
+ 
+ ![](https://github.com/kseniabobkova/Diploma/blob/main/documentation/AllureReports/Allure_Report_CreditPurchaseTest.jpg)
+  
 По итогам тестирования заведены [Issues #1 - #11](https://github.com/kseniabobkova/Diploma/issues), из них #1 и #10 по итогам мануального тестирования. 
 
 ## Общие рекомендации
