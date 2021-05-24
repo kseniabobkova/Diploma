@@ -109,6 +109,15 @@ public class CreditPurchaseTest {
     }
 
     @Test
+    void shouldNotBuyWithMonthWithNulls()  {
+        Card card = new Card(getApprovedNumber(),"00", getNextYear(), getValidName(), getValidCvc());
+        val mainPage = new MainPage();
+        val creditPurchasePage = mainPage.buyInCredit();
+        creditPurchasePage.fulfillData(card);
+        creditPurchasePage.checkInvalidDate();
+    }
+
+    @Test
     void shouldNotBuyWithoutYear() {
         Card card = new Card(getApprovedNumber(),getCurrentMonth(), "", getValidName(), getValidCvc());
         val mainPage = new MainPage();
@@ -209,6 +218,15 @@ public class CreditPurchaseTest {
     @Test
     void shouldNotBuyWithCVVWithSymbol()  {
         Card card = new Card(getApprovedNumber(),getCurrentMonth(), getNextYear(), getValidName(), "12!");
+        val mainPage = new MainPage();
+        val creditPurchasePage = mainPage.buyInCredit();
+        creditPurchasePage.fulfillData(card);
+        creditPurchasePage.checkInvalidFormat();
+    }
+
+    @Test
+    void shouldNotBuyWithCVVWithNulls()  {
+        Card card = new Card(getApprovedNumber(),getCurrentMonth(), getNextYear(), getValidName(), "000");
         val mainPage = new MainPage();
         val creditPurchasePage = mainPage.buyInCredit();
         creditPurchasePage.fulfillData(card);

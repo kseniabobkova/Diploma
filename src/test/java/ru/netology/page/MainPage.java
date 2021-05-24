@@ -9,21 +9,21 @@ import static com.codeborne.selenide.Selenide.$$;
 public class MainPage {
 
         private final SelenideElement HEADING = $$("h2").find(exactText("Путешествие дня"));
-        private final SelenideElement BUTTONBUY = $$("button").find(exactText("Купить"));
-        private final SelenideElement BUTTONCREDIT = $$("button").find(exactText("Купить в кредит"));
+        private final SelenideElement BUTTON_BUY = $$("button").find(exactText("Купить"));
+        private final SelenideElement BUTTON_CREDIT = $$("button").find(exactText("Купить в кредит"));
 
         public MainPage() {
             HEADING.shouldBe(Condition.visible);
         }
 
         public CardPurchasePage buy() {
-            BUTTONBUY.click();
+            BUTTON_BUY.click();
             return new CardPurchasePage();
 
         }
 
         public CreditPurchasePage buyInCredit() {
-            BUTTONCREDIT.click();
+            BUTTON_CREDIT.click();
             return new CreditPurchasePage();
         }
     }

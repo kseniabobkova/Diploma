@@ -26,7 +26,7 @@ public class CardPurchaseTest {
 
     @BeforeEach
     void setUp() {
-        open("http://localhost:8080");
+        open(System.getProperty("sut.url"));
         DbHelper.clearDB();
     }
 
@@ -104,6 +104,15 @@ public class CardPurchaseTest {
     @Test
     void shouldNotBuyWithTooBigMonthsNumber()  {
         Card card = new Card(getApprovedNumber(),"13", getNextYear(), getValidName(), getValidCvc());
+        val mainPage = new MainPage();
+        val cardPurchasePage = mainPage.buy();
+        cardPurchasePage.fulfillData(card);
+        cardPurchasePage.checkInvalidDate();
+    }
+
+    @Test
+    void shouldNotBuyWithMonthWithNulls()  {
+        Card card = new Card(getApprovedNumber(),"00", getNextYear(), getValidName(), getValidCvc());
         val mainPage = new MainPage();
         val cardPurchasePage = mainPage.buy();
         cardPurchasePage.fulfillData(card);
@@ -211,6 +220,15 @@ public class CardPurchaseTest {
     @Test
     void shouldNotBuyWithCVVWithSymbol()  {
         Card card = new Card(getApprovedNumber(),getCurrentMonth(), getNextYear(), getValidName(), "12!");
+        val mainPage = new MainPage();
+        val cardPurchasePage = mainPage.buy();
+        cardPurchasePage.fulfillData(card);
+        cardPurchasePage.checkInvalidFormat();
+    }
+
+    @Test
+    void shouldNotBuyWithCVVWithNulls()  {
+        Card card = new Card(getApprovedNumber(),getCurrentMonth(), getNextYear(), getValidName(), "000");
         val mainPage = new MainPage();
         val cardPurchasePage = mainPage.buy();
         cardPurchasePage.fulfillData(card);
